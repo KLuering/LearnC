@@ -3,7 +3,10 @@
 int nth_perfect_number() {
     int n, i = 10, count = 0;
     printf("Enter a positive integer n: ");
-    scanf("%d", &n);
+    if(scanf("%d", &n) != 1) {
+        printf("Invalid input!\n");
+        return 0;
+    }
     while (1) {
         int temp = i;
         int digit_sum = 0;
